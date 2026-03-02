@@ -16,6 +16,8 @@ namespace Calculator
             Console.WriteLine("2 - Subtrair");
             Console.WriteLine("3 - Multiplicar");
             Console.WriteLine("4 - Dividir");
+            Console.WriteLine("5 - Resto");
+            Console.WriteLine("6 - Potencia");
             Console.WriteLine("0 - Sair");
 
             string escolha = Console.ReadLine();
@@ -35,6 +37,14 @@ namespace Calculator
             if (escolha == "4")
             {
                 Dividir();
+            }
+            if (escolha == "5")
+            {
+                Resto();
+            }
+            if (escolha == "6")
+            {
+                Potencia();
             }
 
         }
@@ -86,6 +96,28 @@ namespace Calculator
             {
                 Console.WriteLine("Não é possível dividir por zero.");
             }
+            Console.ReadLine();
+            Menu();
+        }
+        public static void Resto()
+        {
+            double n1, n2;
+            Console.WriteLine("Entre com o primeiro número: ");
+            n1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Entre com o segundo número: ");
+            n2 = double.Parse(Console.ReadLine());
+            Console.WriteLine(n1 % n2);
+            Console.ReadLine();
+            Menu();
+        }
+        public static void Potencia()
+        {
+            double n1, n2;
+            Console.WriteLine("Entre com o primeiro número: ");
+            n1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Entre com o segundo número: ");
+            n2 = double.Parse(Console.ReadLine());
+            Console.WriteLine(Math.Pow(n1, n2));
             Console.ReadLine();
             Menu();
         }
